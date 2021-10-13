@@ -5,13 +5,9 @@ import { Button, CircularProgress, Snackbar } from "@material-ui/core";
 import Alert from "@material-ui/lab/Alert";
 import { BrowserRouter } from 'react-router-dom';
 
-import chain from './images/traits/drip/Chain.png'
-import piercings from './images/traits/drip/Piercings.png'
-
 import './App.css';
 import twitter from './twitter.svg';
 import discord from './discord.svg';
-import rich from './images/49.jpg'
 import elGif from './images/elGif.gif'
 import halloween from './images/halloween.jpg'
 import mountainBear from './images/mountainBear.jpg'
@@ -201,16 +197,16 @@ const Home = (props: HomeProps) => {
                     <div className="aboutBox">
                         <div className="gallery">
                             <figure className="gallery_item gallery_item_1">
-                                <img src={halloween} className="gallery_img"/>
+                                <img src={halloween} className="gallery_img" alt=""/>
                             </figure>
                             <figure className="gallery_item gallery_item_2">
-                                <img src={rainbowBear} className="gallery_img"/>
+                                <img src={rainbowBear} className="gallery_img" alt=""/>
                             </figure>
                             <figure className="gallery_item gallery_item_3">
-                                <img src={mountainBear} className="gallery_img"/>
+                                <img src={mountainBear} className="gallery_img" alt=""/>
                             </figure>
                             <figure className="gallery_item gallery_item_4">
-                                <img src={sailorBear} className="gallery_img"/>
+                                <img src={sailorBear} className="gallery_img" alt=""/>
                             </figure>
                         </div>
                     </div>
