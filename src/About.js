@@ -11,10 +11,14 @@ function About() {
             <header className="App-header">
                 <h1 className="App-header-text">RichTheBear</h1>
             </header>
-            <img src={rich} alt="" className="About-Me-prof"/>
-            <div className="App-body">
-                <div>
-                    <h3 className="Act-title">ABOUT RICH</h3>
+
+            <div class="aboutRow">
+                <div class="aboutColumn">
+                    <div className="aboutBox">
+                        <img src={rich} alt="" className="aboutBear"/>
+                    </div>
+                </div>
+                <div class="aboutColumn">
                     <p className="Act-desc">
                         Deep in the forest lurks a vengeful and deliberate bear. His sole purpose is to reclaim the forest and protect his natural habitat from the encroachment of man.
                     </p>
@@ -23,6 +27,7 @@ function About() {
                     </p>
                 </div>
             </div>
+
             <footer className="App-footer">
                 <a href="https://discord.gg/rUcQMzF7Ry" target="_blank" rel="noopener noreferrer">
                     <img src={discord} className="Social-logo" alt="Discord" />

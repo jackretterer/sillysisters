@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-function About() {
+function Adopt() {
     return (
         <div className="App">
             <header className="App-header">
@@ -25,4 +25,4 @@ function About() {
     );
 }
 
-export default About;
+export default Adopt;

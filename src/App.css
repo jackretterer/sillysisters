@@ -1,9 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Niramit:300,300i,700');
+
 .App {
   background-image: url("./background.jpg");
   height: 100vh;
   background-color: #001630;
   margin-top: 0px;
   overflow-y: auto;
+}
+
+.aboutRow {
+  display: flex;
+}
+
+.aboutColumn{
+  flex: 50%;
+  padding: 2rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font: 500 100%/1.5 system-ui;
+}
+
+.adoptionBear { 
+  border-radius: 25px;
+  width: 400px;
+  height: auto;
+}
+
+.adoptionColumn{
+  flex: 50%;
+  padding: 2rem;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
+  font: 500 100%/1.5 system-ui;
+}
+
+.adoptionColumnText{
+  flex: 50%;
+  text-align: right;
+}
+
+.adoption-header-text { 
+  text-align: center;
+}
+
+
+.aboutBear { 
+  width: 400px;
+  height: auto;
+}
+
+.aboutBox {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4.5, 1fr);
+  grid-template-rows: repeat(4.5, 5vw);
+  grid-gap: 1rem;
+}
+
+.gallery_img {
+  border-radius: 25px;
+  width: 190px;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+.gallery_item_1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery_item_2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+.gallery_item_3 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.gallery_item_4 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+}
+
+.walletConnection {
+  text-align: center;
+}
+
+.walletText {
+  color: #800020;
+  padding-top: 15px;
+  font-weight: bold;
+}
+
+.traitsRow {
+  display: flex;
+}
+
+.traitsCol {
+  flex: 33.33%;
+  padding: 5px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Set a background color */
+.body {
+  background-color: #474e5d;
+  font-family: Helvetica, sans-serif;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: white;
+  border: 4px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: 0;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -16px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+/* Place the timelime to the left */
+  .timeline::after {
+    left: 31px;
+  }
+
+/* Full-width containers */
+  .container {
+    width: 100%;
+    padding-left: 70px;
+    padding-right: 25px;
+  }
+
+/* Make sure that all arrows are pointing leftwards */
+  .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  }
+
+/* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+    left: 15px;
+  }
+
+/* Make all right containers behave like the left ones */
+  .right {
+    left: 0%;
+  }
+}
+
+.roadmap {
+  font-weight: bold;
+  font-size: 110%;
+  padding-top: 1%;
 }
 
 .App-header {
@@ -26,51 +278,24 @@
 
 .App-footer {
   position: absolute;
-  bottom: 0px;
-  height: 86px;
-  width: 165px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #cacaca;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  top: 4%;
+  right: 3%;
+  height: auto;
 }
 
 .App-header-text {
   margin-block-start: 0;
-}
-
-.Nav-bar {
-  overflow: hidden;
-  position: fixed;
-  width: 100%;
-  background-image: url("./background.jpg");
-  background-color: #001630;
-  top: 0px;
-  z-index: 999;
-}
-
-.Nav-links {
-  float: right;
-  padding: 15px;
-  color: #ffffff;
-  text-align: center;
-  text-decoration: none;
-}
-
-.Nav-links:hover {
-  background-color: rgba(105, 105, 105, 0.7);
-  color: #ffffff;
-}
-
-.active {
-  border-bottom:3px solid red;
+  font-weight: bold;
+  color: #800020;
 }
 
 .Act-desc {
   padding-left: 30px;
   padding-right: 50px;
   text-align: justify;
+  color: black;
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 .Act-title {
@@ -91,79 +316,6 @@
   height: 46px;
   padding: 18px;
 }
-
-.prof-pic {
-  width: 30%;
-  height: auto;
-  border-radius: 50%;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: 3px solid white;
-}
-
-.intro {
-  margin-right: 25%;
-  margin-left: 25%;
-  text-align: center;
-  color: #ffffff;
-}
-
-.resume {
-  width: 66%;
-  height: calc(66vw * (2200/1700));
-}
-
-.form-input {
-  margin-top: 10px;
-}
-
-.emailSent {
-  border: 1px solid rgb(0, 255, 8);
-  background-color: rgba(164,255,169, 0.5);
-  border-radius: 4px;
-  margin-top: 20px;
-  padding: 12px;
-  display: inline-block;
-}
-
-.emailError {
-  border: 1px solid rgb(255, 0, 0);
-  background-color: rgba(255, 172, 172, 0.5);
-  border-radius: 4px;
-  margin-top: 20px;
-  padding: 12px;
-  display: inline-block;
-}
-
-label {
-  display:block;
-  clear: both;
-}
-
-input[type=text],input[type=email], textarea {
-  width: 40%;                     
-  padding: 12px;                     
-  border: 1px solid #ccc;                     
-  border-radius: 4px;                     
-  box-sizing: border-box;                     
-  margin-top: 6px;                     
-  resize: vertical;                     
-} 
-
-button[type=submit] {
-  background-color: #4CAF50;              
-  color: white;              
-  padding: 12px 20px;              
-  border: none;              
-  border-radius: 4px;              
-  cursor: pointer;
-  margin-top: 10px;
-}
-
-button[type=submit]:hover {              
-  background-color: #45a049;              
- }
 
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
@@ -212,3 +364,119 @@ button[type=submit]:hover {
     width: 100%;
   }
 }
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'K2D', sans-serif;
+    background: #1e1e2f;
+    letter-spacing: 1px;
+}
+
+.container {
+    max-width: 650px;
+    margin: 75px auto;
+}
+
+p {
+    font-weight: 300;
+    line-height: 1.5;
+    font-size: 14px;
+    opacity: .8;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 4rem;
+  padding-top: 40px;
+  margin: 0 0 0 30px;
+  color: white;
+}
+.timeline:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background: #27293d;
+}
+.timeline .timeline-container {
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+
+
+.timeline .timeline-container .timeline-icon {
+  position: absolute;
+  left: -88px;
+  top: 4px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 2rem;
+  background: #4f537b;
+}
+.timeline .timeline-container .timeline-icon i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+}
+.timeline .timeline-container .timeline-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.timeline .timeline-container .timeline-body {
+  background: #27293d;
+  border-radius: 3px;
+  padding: 20px 20px 15px;
+  box-shadow: 1px 3px 9px rgba(0,0,0,0.1);
+}
+.timeline .timeline-container .timeline-body:before {
+  content: '';
+  background: inherit;
+  width: 20px;
+  height: 20px;
+  display: block;
+  position: absolute;
+  left: -10px;
+  transform: rotate(45deg);
+  border-radius: 0 0 0 2px;
+}
+.timeline .timeline-container .timeline-body .timeline-title {
+  margin-bottom: 1.4rem;
+}
+.timeline .timeline-container .timeline-body .timeline-title .badge {
+  background: #4f537b;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.timeline .timeline-container .timeline-body .timeline-subtitle {
+  font-weight: 300;
+  font-style: italic;
+  opacity: .4;
+  margin-top: 16px;
+  font-size: 11px;
+}
+
+.timeline .timeline-container.primary .badge, .timeline .timeline-container.primary .timeline-icon {
+  background: #00bf9a !important;
+}
+.timeline .timeline-container.success .badge, .timeline .timeline-container.success .timeline-icon {
+  background: #fd5d93 !important;
+}
+.timeline .timeline-container.danger .badge, .timeline .timeline-container.danger .timeline-icon {
+  background: #1d8cf8 !important;
+}
+
+
