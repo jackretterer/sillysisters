@@ -156,7 +156,7 @@
 }
 
 /* The circles on the timeline */
-.container::after {
+/* .container::after {
   content: '';
   position: absolute;
   width: 25px;
@@ -167,7 +167,7 @@
   top: 15px;
   border-radius: 50%;
   z-index: 1;
-}
+} */
 
 /* Place the container to the left */
 .left {
@@ -250,6 +250,14 @@
   .right {
     left: 0%;
   }
+
+  .aboutRow {
+    display: inline;
+  }
+
+  .adoptionBear, .container, .gallery_img { 
+    width: 100%
+  }
 }
 
 .roadmap {
@@ -313,7 +321,7 @@
 }
 
 .Social-logo {
-  height: 46px;
+  height: 80px;
   padding: 18px;
 }
 
@@ -380,7 +388,7 @@ body {
 
 .container {
     max-width: 650px;
-    margin: 75px auto;
+    margin: 0px auto;
 }
 
 p {
