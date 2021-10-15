@@ -33,9 +33,9 @@ const ConnectButton = styled(WalletDialogButton)`front-size: 1em; margin: 1em; c
 
 const CounterText = styled.span``; // add your styles here
 
-const MintContainer = styled.div``; // add your styles here
+const MintContainer = styled.div`color: red;`; // add your styles here
 
-const MintButton = styled(Button)`front-size: 1em; margin: 1em; color: green; border: 2px solid ${props => props.theme.main};`; // add your styles here
+const MintButton = styled(WalletDialogButton)`front-size: 1em; margin: 2em; color: green; border: 2px solid ${props => props.theme.main};`; // add your styles here
 
 export interface HomeProps {
   candyMachineId: anchor.web3.PublicKey;
@@ -178,14 +178,40 @@ const Home = (props: HomeProps) => {
   return (
 
     <BrowserRouter>
-      <footer className="App-footer">
-        <a href="https://discord.gg/rUcQMzF7Ry" target="_blank" rel="noopener noreferrer">
-            <img src={discord} className="Social-logo" alt="Discord" />
-        </a>
-        <a href="https://twitter.com/RichtheBearNFTs" target="_blank" rel="noopener noreferrer">
-            <img src={twitter} className="Social-logo" alt="Twitter" />
-        </a>
-      </footer>
+      <header className="Nav-bar">
+          <div className="Nav-socials">
+            <a href="https://discord.gg/rUcQMzF7Ry" target="_blank" rel="noopener noreferrer">
+                <img src={discord} className="Social-logo" alt="Discord" />
+            </a>
+            <a href="https://twitter.com/RichtheBearNFTs" target="_blank" rel="noopener noreferrer">
+                <img src={twitter} className="Social-logo" alt="Twitter" />
+            </a>
+          </div>
+      <div className="Nav-links">
+                            {/* {wallet && (<p className="walletText">Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>)}
+                            {wallet && <p className="walletText">Balance: {(balance || 0).toLocaleString()} SOL</p>}
+                            {wallet && <p className="walletText">Total Available: {itemsAvailable}</p>}
+                            {wallet && <p className="walletText">Redeemed: {itemsRedeemed}</p>} */}
+                            {wallet && <p className="walletText">Remaining Bears: {itemsRemaining}</p>}
+                            <MintContainer>
+                              {!wallet ? (<ConnectButton>Connect Wallet</ConnectButton>) : (
+                                // <div className="walletContainer">
+                                //   <div className="walletMain">
+                                    <MintButton disabled={isSoldOut || isMinting || !isActive} onClick={onMint} variant="contained">
+                                      {isSoldOut ? ("SOLD OUT") : isActive ? (isMinting ? (<CircularProgress />) : <div className="walletMint">MINT</div>) : (
+                                        <Countdown date={startDate} onMount={({ completed }) => completed && setIsActive(true)} onComplete={() => setIsActive(true)} renderer={renderCounter}/>
+                                      )}
+                                    </MintButton>
+                                //   </div>    
+                                // </div>  
+                              )}
+                            </MintContainer>
+
+                            <Snackbar open={alertState.open} autoHideDuration={6000} onClose={() => setAlertState({ ...alertState, open: false })}>
+                              <Alert onClose={() => setAlertState({ ...alertState, open: false })} severity={alertState.severity}> {alertState.message} </Alert>
+                            </Snackbar>        
+      </div>
+      </header>
       <div>
         <div className="App">
             <header className="App-header">
@@ -233,28 +259,6 @@ const Home = (props: HomeProps) => {
                         <p className="Act-desc">
                             Recruit a bear to reclaim the forest from the encroachment of man!!!
                         </p>
-
-                        
-                        <div className="walletConnection">
-                            {wallet && (<p className="walletText">Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>)}
-                            {wallet && <p className="walletText">Balance: {(balance || 0).toLocaleString()} SOL</p>}
-                            {wallet && <p className="walletText">Total Available: {itemsAvailable}</p>}
-                            {wallet && <p className="walletText">Redeemed: {itemsRedeemed}</p>}
-                            {wallet && <p className="walletText">Remaining: {itemsRemaining}</p>}
-                            <MintContainer>
-                              {!wallet ? (<ConnectButton>Connect Wallet</ConnectButton>) : (
-                                <MintButton disabled={isSoldOut || isMinting || !isActive} onClick={onMint} variant="contained">
-                                  {isSoldOut ? ("SOLD OUT") : isActive ? (isMinting ? (<CircularProgress />) : ("MINT")) : (
-                                    <Countdown date={startDate} onMount={({ completed }) => completed && setIsActive(true)} onComplete={() => setIsActive(true)} renderer={renderCounter}/>
-                                  )}
-                                </MintButton>
-                              )}
-                            </MintContainer>
-
-                            <Snackbar open={alertState.open} autoHideDuration={6000} onClose={() => setAlertState({ ...alertState, open: false })}>
-                              <Alert onClose={() => setAlertState({ ...alertState, open: false })} severity={alertState.severity}> {alertState.message} </Alert>
-                            </Snackbar>
-                        </div>
                         
                 </div>
             </div>
