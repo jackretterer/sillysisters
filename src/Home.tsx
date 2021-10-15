@@ -262,7 +262,9 @@ const Home = (props: HomeProps) => {
           <div className="aboutColumn">
             <h1 className="who-text">Who Are They?</h1>
             <p className="who-desc">
-              RichTheBear has crafted and breeded 10,000 clones of himself to infiltrate human civilization to slowly corrupt and cripple the establishment.
+              RichTheBear has crafted and bred 10,000 clones of himself to infiltrate human civilization to slowly corrupt and cripple the establishment. 
+              Humans have ruled long enough. Their destructive history has left the planet vulnerable, stained and partially destroyed.
+              Its about time that nature fights back. Help Rich reclaim his home!
             </p>
             <p className="who-desc">
               Explore even more bears and even adopt your own on Solana.
@@ -286,10 +288,10 @@ const Home = (props: HomeProps) => {
                 <div className="timeline-body">
                   <h4 className="timeline-title"><span className="badge">Completed</span></h4>
                   <p className="roadmap">Artwork:</p>
-                  <p>Publish an army of vengeful bears seeking dedeption on humankind for nature's destruction.</p>
+                  <p>Publish an army of vengeful bears seeking deception on humankind for nature's destruction.</p>
 
                   <p className="roadmap"> Website:</p>
-                  <p>Publish an army of vengeful bears seeking dedeption on humankind for nature's destruction.</p>
+                  <p>Create a website built from scratch to showcase RichTheBear and his clones.</p>
                   <p className="roadmap"> Discord:</p>
                   <p>Released our public Discord server run by Women!</p>
                   <p className="timeline-subtitle">Summer 2021</p>
