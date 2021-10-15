@@ -55,11 +55,12 @@
 
 .aboutColumn{
   flex: 50%;
-  padding: 2rem;
   align-items: center;
   max-width: 800px;
-  margin: 0 auto;
+  margin: 40px auto;
   font: 500 100%/1.5 system-ui;
+  width: 50%;
+  max-width: 400px;
 }
 
 .adoptionBear { 
@@ -105,6 +106,10 @@
   justify-content: center;
   font-size: calc(5px + 2vmin);
   color: black;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
 .App-body {
@@ -131,7 +136,6 @@
 
 .who-desc {
   padding-left: 0px;
-  padding-right: 150px;
   text-align: justify;
   color: white;
   padding-top: 10px;
@@ -143,6 +147,9 @@
   grid-template-columns: repeat(4.5, 1fr);
   grid-template-rows: repeat(4.5, 5vw);
   grid-gap: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  float: right;
 }
 
 .gallery_img {
@@ -479,7 +486,7 @@ p {
   /* Full-width containers */
     .container {
       width: 100%;
-      padding-left: 70px;
+      padding-left: 10px;
       padding-right: 25px;
     }
   
@@ -534,7 +541,17 @@ p {
     }
   
     .App-header {
-      margin-top: 41px;
+      margin-top: 80px;
+    }
+
+    .App-header-desc {
+      width: 90%;
+    }
+
+    .App-header-text {
+      padding: 10px;
+      padding-top: 250px;
+      text-align: center;
     }
   
     .Act-desc {
@@ -558,5 +575,28 @@ p {
   
     input[type=text],input[type=email], textarea {
       width: 100%;
+    }
+
+    .who-desc {
+      padding-right: unset;
+    }
+
+    .adoptColumn {
+      width: unset;
+      padding: 32px;
+    }
+
+    .adoptRow {
+      display: flex;
+      flex-flow: column-reverse;
+    }
+
+    .adopt-Recruit {
+      height: unset;
+    }
+
+    .aboutColumn {
+      width: unset;
+      padding: 32px;
     }
   }
