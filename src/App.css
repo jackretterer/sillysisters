@@ -1,11 +1,52 @@
 @import url('https://fonts.googleapis.com/css?family=Niramit:300,300i,700');
 
+.App-First-Page {
+  background-color: #27293d;
+  height: 100vh;
+  background-size: cover;
+  margin-top: 0px;
+  overflow-y: auto;
+}
+
 .App {
   background-image: url("./background.jpg");
   height: 100vh;
   background-color: #001630;
+  background-size: cover;
   margin-top: 0px;
   overflow-y: auto;
+}
+
+.adopt-Recruit {
+  background-color: #1e1e2e;
+  height: 500px;
+  margin-top: 0px;
+}
+
+.adoptColumn {
+  padding-top: 50px;
+  width: 50%;
+  flex: 50%;
+  max-width: 400px;
+  margin: auto;
+  font: 500 100%/1.5 system-ui;
+}
+
+.adoptRow {
+  display: flex;
+}
+
+.adopt-header-text {
+  margin-block-start: 0;
+  font-weight: bold;
+  color:white;
+}
+
+.adopt-desc {
+  text-align: justify;
+  color:white;
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 .aboutRow {
@@ -27,25 +68,6 @@
   height: auto;
 }
 
-.adoptionColumn{
-  flex: 50%;
-  padding: 2rem;
-  align-items: center;
-  max-width: 800px;
-  margin: 0 auto;
-  font: 500 100%/1.5 system-ui;
-}
-
-.adoptionColumnText{
-  flex: 50%;
-  text-align: right;
-}
-
-.adoption-header-text { 
-  text-align: center;
-}
-
-
 .aboutBear { 
   width: 400px;
   height: auto;
@@ -55,6 +77,65 @@
   display: flex;
   align-items: center;
   justify-content: right;
+}
+
+
+.App-header {
+  margin-top: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: #3F51B5;
+}
+
+.App-header-text {
+  margin-block-start: 0;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 10px;
+}
+
+.App-header-desc {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(5px + 2vmin);
+  color: black;
+}
+
+.App-body {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.App-footer {
+  position: absolute;
+  top: 4%;
+  right: 3%;
+  height: auto;
+}
+
+.who-text {
+  margin-block-start: 0;
+  font-weight: bold;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.who-desc {
+  padding-left: 0px;
+  padding-right: 150px;
+  text-align: justify;
+  color: white;
+  padding-top: 10px;
+  font-weight: bold;
 }
 
 .gallery {
@@ -155,7 +236,7 @@
 }
 
 .walletText {
-  color: #0000FF;
+  color: ##3F51B5;
   padding-top: 15px;
   font-weight: bold;
   padding-bottom: 7px;
@@ -267,60 +348,6 @@
   font-weight: bold;
   font-size: 110%;
   padding-top: 1%;
-}
-
-.App-header {
-  margin-top: 51px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #0000FF;
-}
-
-.App-body {
-  display: flex;
-  flex-direction: column;
-  text-align: left;
-  padding: 30px;
-  color: #ffffff;
-}
-
-.App-footer {
-  position: absolute;
-  top: 4%;
-  right: 3%;
-  height: auto;
-}
-
-.App-header-text {
-  margin-block-start: 0;
-  font-weight: bold;
-  color: #0000FF;
-}
-
-.Act-desc {
-  padding-left: 0px;
-  padding-right: 150px;
-  text-align: justify;
-  color: black;
-  padding-top: 10px;
-  font-weight: bold;
-}
-
-.Act-title {
-  padding-left: 25px;
-  display: inline;
-}
-
-.Act-company {
-  display: inline;
-  color: red;
-}
-
-.Act-img {
-  width: 20%;
 }
 
 .Social-logo {

@@ -212,12 +212,39 @@ const Home = (props: HomeProps) => {
                             </Snackbar>        
       </div>
       </header>
-      <div>
-        <div className="App">
+    
+      <div className="App">
             <header className="App-header">
-                <h1 className="App-header-text">RichTheBear</h1>
+                <h1 className="App-header-text">Welcome to the Forest</h1>
             </header>
+            <p className="App-header-desc">
+                Join Rich in his mission to reclaim the forest and protect his                       
+            </p>
+            <p className="App-header-desc">
+                natural habitat from the enchroachment of man.
+            </p> 
+      </div>
 
+      <div className="adopt-Recruit">
+                <div className="adoptRow">
+                    <div className="adoptColumn">
+                        <h1 className="adopt-header-text">Adopt a Recruit:</h1>
+                            <p className="adopt-desc">
+                                Deep in the forest lurks a vengeful and deliberate bear. His sole purpose is to reclaim the forest and protect his natural habitat from the encroachment of man.
+                            </p>
+                            <p className="adopt-desc">
+                                RichTheBear has crafted and breeded 10,000 clones of himself to infiltrate human civilization to slowly corrupt and cripple the establishment.
+                            </p>                           
+                    </div>
+                    <div className="adoptColumn">
+                        <div className="aboutBox">
+                        <img src={elGif} alt="" className="adoptionBear"/>
+                        </div>
+                    </div>
+                </div>
+      </div>                                  
+
+      <div className="App-First-Page">
             <div className="aboutRow">
                 <div className="aboutColumn">
                     <div className="aboutBox">
@@ -238,32 +265,15 @@ const Home = (props: HomeProps) => {
                     </div>
                 </div>
                 <div className="aboutColumn">
-                    <h1 className="App-header-text">Who Are They?</h1>
-                        <p className="Act-desc">
-                            Deep in the forest lurks a vengeful and deliberate bear. His sole purpose is to reclaim the forest and protect his natural habitat from the encroachment of man.
-                        </p>
-                        <p className="Act-desc">
+                    <h1 className="who-text">Who Are They?</h1>
+                        <p className="who-desc">
                             RichTheBear has crafted and breeded 10,000 clones of himself to infiltrate human civilization to slowly corrupt and cripple the establishment.
                         </p>
-                </div>
-            </div>
-
-            <div className="aboutRow">
-                <div className="aboutColumn">
-                    <div className="aboutBox">
-                    <img src={elGif} alt="" className="adoptionBear"/>
-                    </div>
-                </div>
-                <div className="aboutColumn">
-                    <h1 className="App-header-text">Adopt a Recruit:</h1>
-                        <p className="Act-desc">
-                            Recruit a bear to reclaim the forest from the encroachment of man!!!
+                        <p className="who-desc">
+                            Explore even more bears and even adopt your own on Solana.
                         </p>
-                        
                 </div>
             </div>
-
-
 
                 <header>
                     <meta charSet="UTF-8"></meta>
@@ -319,9 +329,7 @@ const Home = (props: HomeProps) => {
                         </div>
                     </div>
                 </body>
-
-
-        </div>
+                {/* </div> */}
         </div>
     </BrowserRouter>
   );
