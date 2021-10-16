@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar, createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { Button, CircularProgress, Snackbar, ThemeProvider } from "@material-ui/core";
 // import { white } from '@material-ui/core/colors';
 import {createTheme} from '@mui/material/styles';
 import Alert from "@material-ui/lab/Alert";
 import { BrowserRouter } from 'react-router-dom';
-// import { createMuiTheme } from '@material-ui/core/styles';
 
 import './App.css';
 import twitter from './twitter.svg';
@@ -24,6 +23,7 @@ import Pipe from './images/traits/accessories/Pipe.jpg'
 import Mic from './images/traits/accessories/Mic.jpg'
 import Chain from './images/traits/drip/Chain.jpg'
 import Piercings from './images/traits/drip/Piercings.jpg'
+import Laser from './images/traits/drip/Laser.png'
 import Angry from './images/traits/expressions/Angry.jpg'
 import Crying_Laughing from './images/traits/expressions/Crying_Laughing.jpg'
 import Crying from './images/traits/expressions/Crying.jpg'
@@ -74,6 +74,8 @@ import {
   shortenAddress,
 } from "./candy-machine";
 
+import { createMuiTheme } from '@material-ui/core/styles';
+
 const ConnectButton = styled(WalletDialogButton)`front-size: 1em; margin: 1em; color: black; border: 2px solid ${props => props.theme.main};`;
 
 const CounterText = styled.span``; // add your styles here
@@ -91,18 +93,22 @@ export interface HomeProps {
   txTimeout: number;
 }
 
-// declare module '@material-ui/core/styles/createMuiTheme' {
-//   interface ThemeOptions {
-//       themeName?: string  // optional
-//   }
-// }
+ declare global {
+   interface ThemeOptions {
+       themeName?: string  // optional
+   }
+ }
 
-// const palette = {
-// primary: { main: '#3f51b5' },
-// secondary: { main: '#f50057' }
-// };
+ export type buttonType = typeof palette;
 
-// const themeName = 'San Marino Razzmatazz Sugar Gliders';
+ export const palette = {
+  primary: "#3f51b5",
+  secondary: "#f50057",
+ }
+
+ const buttonColor = palette;
+
+ 
 
 
 const Home = (props: HomeProps) => {
@@ -240,6 +246,11 @@ const Home = (props: HomeProps) => {
     setTraitSelected(id)
   }
 
+  const blueButton = {
+    color: '#4250ae',
+    border: 2,
+  } as const;
+
 
   return (
 
@@ -344,7 +355,7 @@ const Home = (props: HomeProps) => {
         <div className="traits">
           <header className="traits-header">Rarity Chart</header>
             <div className="traits-nav">
-              <Button id="base" className="traits-button" style={{color:'white'}} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
+              <Button id="base" className="traits-button" style={blueButton} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
               <Button id="shirts" className="traits-button" color={traitSelected === "shirts" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
               <Button id="hats" className="traits-button" color={traitSelected === "hats" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button>
               <Button id="accessories" className="traits-button" color={traitSelected === "accessories" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button>
@@ -352,14 +363,38 @@ const Home = (props: HomeProps) => {
             </div>
             <div className="traits-main">
                 <div id="base" className="traits-wrap" style={{display: traitSelected !== "base" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Angry} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Crying_Laughing} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Crying} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Eyes_Closed} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Grimace} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Happy} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Surprised} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Tattoos} alt="" className="traits-img"></img></div>
+                <div className="traitsRow">
+                    <div className="traitsColumn">
+                      <div className="traitsBox">
+                        <div className="traitsGallery">
+                          <figure className="traitsGallery_item traitsGallery_item_1">
+                            <img src={Angry} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_2">
+                            <img src={Crying_Laughing} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_3">
+                            <img src={Crying} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_4">
+                            <img src={Eyes_Closed} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_5">
+                            <img src={Grimace} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_6">
+                            <img src={Happy} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_7">
+                            <img src={Surprised} className="traitsGallery_img" alt="" />
+                          </figure>
+                          <figure className="traitsGallery_item traitsGallery_item_8">
+                            <img src={Tattoos} className="traitsGallery_img" alt="" />
+                          </figure>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div id="shirts" className="traits-wrap" style={{display: traitSelected !== "shirts" ? "none" : ""}}>
                   <div className="traits-box"><img src={BlueShirt} alt="" className="traits-img"></img></div>
@@ -391,6 +426,9 @@ const Home = (props: HomeProps) => {
                   <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
                   <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
                   <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Chain} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Piercings} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Laser} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="background" className="traits-wrap" style={{display: traitSelected !== "background" ? "none" : ""}}>
                   <div className="traits-box"><img src={Forest} alt="" className="traits-img-bg"></img></div>
