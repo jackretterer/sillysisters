@@ -13,6 +13,7 @@ import halloween from './images/halloween.jpg'
 import mountainBear from './images/mountainBear.jpg'
 import sailorBear from './images/sailorBear.jpg'
 import rainbowBear from './images/rainbowBear.jpg'
+import richTitle from './RichTitle.png'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -216,10 +217,12 @@ const Home = (props: HomeProps) => {
       <div className="App-First-Page">
         <div className="App">
           <header className="App-header">
-            <h1 className="App-header-text">Welcome to the Forest</h1>
+            <h1 className="App-header-text">
+              <img src={richTitle} className="App-header-image" alt=""/>
+            </h1>
           </header>
           <p className="App-header-desc">
-            Join Rich in his mission to reclaim the forest and protect his natural habitat from the enchroachment of man.
+            Join the mysterious and crafty mastermind in his mission to reclaim the forest and cripple mankind.
           </p>
         </div>
         <div className="adopt-Recruit">
