@@ -14,6 +14,13 @@ import mountainBear from './images/mountainBear.jpg'
 import sailorBear from './images/sailorBear.jpg'
 import rainbowBear from './images/rainbowBear.jpg'
 import richTitle from './RichTitle.png'
+import Bandana_Black from './images/traits/accessories/Bandana_Black.jpg'
+import Bandana_Red from './images/traits/accessories/Bandana_Red.jpg'
+import Joint from './images/traits/accessories/Joint.jpg'
+import Pipe from './images/traits/accessories/Pipe.jpg'
+import Mic from './images/traits/accessories/Mic.jpg'
+import Chain from './images/traits/drip/Chain.jpg'
+import Piercings from './images/traits/drip/Piercings.jpg'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -228,7 +235,7 @@ const Home = (props: HomeProps) => {
         <div className="adopt-Recruit">
           <div className="adoptRow">
             <div className="adoptColumn">
-              <h1 className="adopt-header-text">Who is RichTheBear?</h1>
+              <h1 className="adopt-header-text">Who is Rich The Bear?</h1>
               <p className="adopt-desc">
                 Deep in the forest lurks a cunning and mysterious mastermind whose sole goal is to protect his natural habitat from the encroachment of man.
               </p>
@@ -242,7 +249,7 @@ const Home = (props: HomeProps) => {
                 <img src={elGif} alt="" className="adoptionBear" />
               </div>
             </div>
-          </div>
+            </div>
         </div>
         <div className="aboutRow">
           <div className="aboutColumn">
@@ -274,6 +281,28 @@ const Home = (props: HomeProps) => {
                 to explore, learn and participate in the quickly growing Blockchain industry.
             </p>
           </div>
+        </div>
+
+        <div className="traits">
+          <header className="traits-header">Rarity Chart</header>
+            <div className="traits-nav">
+              <ul className="traits-list">
+                <li className="traits-button"><button type="button" className="traits-model">Base</button></li>
+                <li className="traits-button"><button type="button" className="traits-model">Shirts</button></li>
+                <li className="traits-button"><button type="button" className="traits-model">Hats</button></li>
+                <li className="traits-button"><button type="button" className="traits-model">Accessories</button></li>
+                <li className="traits-button"><button type="button" className="traits-model">Background</button></li>
+              </ul>
+            </div>
+            <div className="traits-main">
+                <div className="traits-wrap">
+                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                </div>
+            </div>
         </div>
 
         <header>
