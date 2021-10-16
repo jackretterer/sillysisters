@@ -64,6 +64,8 @@ const Home = (props: HomeProps) => {
   const [itemsRedeemed, setItemsRedeemed] = useState(0);
   const [itemsRemaining, setItemsRemaining] = useState(0);
 
+  const [traitSelected, setTraitSelected] = React.useState("base");
+
   const [alertState, setAlertState] = useState<AlertState>({
     open: false,
     message: "",
@@ -183,6 +185,10 @@ const Home = (props: HomeProps) => {
     props.connection,
   ]);
 
+  const handleTraitClick  = (id) => {
+    setTraitSelected(id)
+  }
+
   return (
 
     <BrowserRouter>
@@ -286,16 +292,42 @@ const Home = (props: HomeProps) => {
         <div className="traits">
           <header className="traits-header">Rarity Chart</header>
             <div className="traits-nav">
-              <ul className="traits-list">
-                <li className="traits-button"><button type="button" className="traits-model">Base</button></li>
-                <li className="traits-button"><button type="button" className="traits-model">Shirts</button></li>
-                <li className="traits-button"><button type="button" className="traits-model">Hats</button></li>
-                <li className="traits-button"><button type="button" className="traits-model">Accessories</button></li>
-                <li className="traits-button"><button type="button" className="traits-model">Background</button></li>
-              </ul>
+              <Button id="base" className="traits-button" color={traitSelected === "base" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
+              <Button id="shirts" className="traits-button" color={traitSelected === "shirts" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
+              <Button id="hats" className="traits-button" color={traitSelected === "hats" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button>
+              <Button id="accessories" className="traits-button" color={traitSelected === "accessories" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button>
+              <Button id="background" className="traits-button" color={traitSelected === "background" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("background")}>Background</Button>
             </div>
             <div className="traits-main">
-                <div className="traits-wrap">
+                <div id="base" className="traits-wrap" style={{display: traitSelected !== "base" ? "none" : ""}}>
+                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                </div>
+                <div id="shirts" className="traits-wrap" style={{display: traitSelected !== "shirts" ? "none" : ""}}>
+                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                </div>
+                <div id="hats" className="traits-wrap" style={{display: traitSelected !== "hats" ? "none" : ""}}>
+                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                </div>
+                <div id="accessories" className="traits-wrap" style={{display: traitSelected !== "accessories" ? "none" : ""}}>
+                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                </div>
+                <div id="background" className="traits-wrap" style={{display: traitSelected !== "background" ? "none" : ""}}>
                   <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
                   <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
                   <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>

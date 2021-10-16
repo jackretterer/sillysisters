@@ -81,6 +81,8 @@
 
 .traits-button {
   padding: 10px;
+  margin-right: 10px !important;
+  margin-left: 10px !important;
 }
 
 .traits-model {
@@ -329,7 +331,7 @@
 }
 
 .walletText {
-  color: ##3F51B5;
+  color: #3F51B5;
   padding-top: 15px;
   font-weight: bold;
   padding-bottom: 7px;
