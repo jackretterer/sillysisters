@@ -225,12 +225,13 @@ const Home = (props: HomeProps) => {
         <div className="adopt-Recruit">
           <div className="adoptRow">
             <div className="adoptColumn">
-              <h1 className="adopt-header-text">Adopt a Recruit:</h1>
+              <h1 className="adopt-header-text">Who is RichTheBear?</h1>
               <p className="adopt-desc">
-                Deep in the forest lurks a vengeful and deliberate bear. His sole purpose is to reclaim the forest and protect his natural habitat from the encroachment of man.
+                Deep in the forest lurks a cunning and mysterious mastermind whose sole goal is to protect his natural habitat from the encroachment of man.
               </p>
               <p className="adopt-desc">
-                RichTheBear has crafted and breeded 10,000 clones of himself to infiltrate human civilization to slowly corrupt and cripple the establishment.
+                Humans have ruled long enough and their destructive reign has left the planet vulnerable, stained and in ruin.
+                It's about time that nature fights back. Help Rich reclaim his home! 
               </p>
             </div>
             <div className="adoptColumn">
@@ -260,14 +261,14 @@ const Home = (props: HomeProps) => {
             </div>
           </div>
           <div className="aboutColumn">
-            <h1 className="who-text">Who Are They?</h1>
+            <h1 className="who-text">Adopt a Recruit:</h1>
             <p className="who-desc">
-              RichTheBear has crafted and bred 10,000 clones of himself to infiltrate human civilization to slowly corrupt and cripple the establishment. 
-              Humans have ruled long enough. Their destructive history has left the planet vulnerable, stained and partially destroyed.
-              Its about time that nature fights back. Help Rich reclaim his home!
+                A master of disguises, RichTheBear has created 10,000 clones of himself to infiltrate human civilization 
+                and undermine the establishment.
             </p>
             <p className="who-desc">
-              Explore even more bears and even adopt your own on Solana.
+                Each bear is hand-drawn and designed by a female-led team whose goal is to empower women
+                to explore, learn and participate in the quickly growing Blockchain industry.
             </p>
           </div>
         </div>
@@ -288,12 +289,11 @@ const Home = (props: HomeProps) => {
                 <div className="timeline-body">
                   <h4 className="timeline-title"><span className="badge">Completed</span></h4>
                   <p className="roadmap">Artwork:</p>
-                  <p>Publish an army of vengeful bears seeking deception on humankind for nature's destruction.</p>
-
+                  <p>Create an army of disguised colorful bears seeking revenge on humankind.</p>
                   <p className="roadmap"> Website:</p>
-                  <p>Create a website built from scratch to showcase RichTheBear and his clones.</p>
+                  <p>Build a website from scratch to showcase RichTheBear and his clones.</p>
                   <p className="roadmap"> Discord:</p>
-                  <p>Released our public Discord server run by Women!</p>
+                  <p>Release our public Discord server run by women!</p>
                   <p className="timeline-subtitle">Summer 2021</p>
                 </div>
               </div>
@@ -304,7 +304,7 @@ const Home = (props: HomeProps) => {
                 <div className="timeline-body">
                   <h4 className="timeline-title"><span className="badge">Present</span></h4>
                   <p className="roadmap">Minting:</p>
-                  <p>Be part of the minting process  of 10,000 unique bears!</p>
+                  <p>Be part of the minting process of 10,000 unique bear clones!</p>
                   <p className="timeline-subtitle">Fall 2021</p>
                 </div>
               </div>
@@ -315,11 +315,11 @@ const Home = (props: HomeProps) => {
                 <div className="timeline-body">
                   <h4 className="timeline-title"><span className="badge">Future</span></h4>
                   <p className="roadmap">OpenSource:</p>
-                  <p>We plan on making all NFT creation tools available to the community and accessible to the next generation of talented artists!</p>
-                  <p className="roadmap">Crypto Education and Women Involvment:</p>
-                  <p>Actively teach, include and recruit women into crypto and blockchain technologies!</p>
+                  <p>We plan on making all NFT creation tools available to the community and accessible to the next generation of talented artists.</p>
+                  <p className="roadmap">Crypto Education and Women Involvement:</p>
+                  <p>Actively recruit and teach women about crypto and blockchain technologies!</p>
                   <p className="roadmap">Donation:</p>
-                  <p>Donate a portion of all profits to planting trees to combat climate change!!!</p>
+                  <p>Donate a portion of all profits to planting trees to combat climate change!!</p>
                   <p className="timeline-subtitle">Winter 2021</p>
                 </div>
               </div>
