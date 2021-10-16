@@ -59,7 +59,7 @@
 
 .traits {
   background-color: #27293d;
-  height: 500px;
+  height: 600px;
   margin-top: 0px;
 }
 
@@ -67,20 +67,15 @@
   font-size: 40px;
   text-align: center;
   padding-top: 50px;
+  padding-bottom: 20px;
 }
 
 .traits-nav {
   text-align: center;
 }
 
-.traits-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
 .traits-button {
-  padding: 10px;
+  padding: 20px;
   margin-right: 10px !important;
   margin-left: 10px !important;
 }
@@ -118,12 +113,21 @@
 
 .traits-box {
   border: 5px solid #fff;
-  width: 100px;
+  width: 200px;
   box-shadow: 0 0 18px #ff9330;
   border-radius: 20px;
 }
 
 .traits-img {
+  width: 100%;
+  height: 50%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  justify-content: center;
+}
+
+.traits-img-bg {
   width: 50%;
   height: 50%;
   margin: auto;

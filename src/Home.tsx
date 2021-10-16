@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
-import { Button, CircularProgress, Snackbar } from "@material-ui/core";
+import { Button, CircularProgress, Snackbar, createMuiTheme, ThemeProvider } from "@material-ui/core";
+// import { white } from '@material-ui/core/colors';
+import {createTheme} from '@mui/material/styles';
 import Alert from "@material-ui/lab/Alert";
 import { BrowserRouter } from 'react-router-dom';
+// import { createMuiTheme } from '@material-ui/core/styles';
 
 import './App.css';
 import twitter from './twitter.svg';
@@ -21,6 +24,40 @@ import Pipe from './images/traits/accessories/Pipe.jpg'
 import Mic from './images/traits/accessories/Mic.jpg'
 import Chain from './images/traits/drip/Chain.jpg'
 import Piercings from './images/traits/drip/Piercings.jpg'
+import Angry from './images/traits/expressions/Angry.jpg'
+import Crying_Laughing from './images/traits/expressions/Crying_Laughing.jpg'
+import Crying from './images/traits/expressions/Crying.jpg'
+import Eyes_Closed from './images/traits/expressions/Eyes_Closed.jpg'
+import Grimace from './images/traits/expressions/Grimace.jpg'
+import Happy from './images/traits/expressions/Happy.jpg'
+import Surprised from './images/traits/expressions/Surprised.jpg'
+import Tattoos from './images/traits/expressions/Tattoos.jpg'
+import BlueShirt from './images/traits/shirts/Blue_Shirt.png'
+import Boo from './images/traits/shirts/Boo.png'
+import Dress_Shirt_Cardigan from './images/traits/shirts/Dress_Shirt_Cardigan.png'
+import Dress_Shirt from './images/traits/shirts/Dress_Shirt.png'
+import Hawaiian_Shirt_Orange from './images/traits/shirts/Hawaiian_Shirt_Orange.png'
+import Hoodie_Grey from './images/traits/shirts/Hoodie_Grey.png'
+import Hoodie_Misfits from './images/traits/shirts/Hoodie_Misfits.png'
+import Inmate from './images/traits/shirts/Inmate.png'
+import Jersey from './images/traits/shirts/Jersey.png'
+import Rainbow_Shirt from './images/traits/shirts/Rainbow_Shirt.png'
+import Thrasher_Hoodie from './images/traits/shirts/Thrasher_Hoodie.png'
+import Wife_Beater from './images/traits/shirts/Wife_Beater.png'
+import Xmas_Sweater from './images/traits/shirts/Xmas_Sweater.png'
+import Aviator_Hat from './images/traits/hats/Aviator_Hat.png'
+import Ball_Cap from './images/traits/hats/Ball_Cap.png'
+import Beanie_Red from './images/traits/hats/Beanie_Red.png'
+import Bucket_Hat_Black from './images/traits/hats/Bucket_Hat_Black.png'
+import Bucket_Hat_Yellow from './images/traits/hats/Bucket_Hat_Yellow.png'
+import Cowboy_Hat from './images/traits/hats/Cowboy_Hat.png'
+import Pilot_Hat from './images/traits/hats/Pilot_Hat.png'
+import Forest from './images/traits/backgrounds/Forest.jpg'
+import Halloween from './images/traits/backgrounds/Halloween.jpg'
+import Mountains from './images/traits/backgrounds/Mountains.jpg'
+import Mug from './images/traits/backgrounds/Mug.jpg'
+import Rick from './images/traits/backgrounds/Rick.jpg'
+import Trippy from './images/traits/backgrounds/Trippy.jpg'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -53,6 +90,20 @@ export interface HomeProps {
   treasury: anchor.web3.PublicKey;
   txTimeout: number;
 }
+
+// declare module '@material-ui/core/styles/createMuiTheme' {
+//   interface ThemeOptions {
+//       themeName?: string  // optional
+//   }
+// }
+
+// const palette = {
+// primary: { main: '#3f51b5' },
+// secondary: { main: '#f50057' }
+// };
+
+// const themeName = 'San Marino Razzmatazz Sugar Gliders';
+
 
 const Home = (props: HomeProps) => {
   const [balance, setBalance] = useState<number>();
@@ -189,6 +240,7 @@ const Home = (props: HomeProps) => {
     setTraitSelected(id)
   }
 
+
   return (
 
     <BrowserRouter>
@@ -292,7 +344,7 @@ const Home = (props: HomeProps) => {
         <div className="traits">
           <header className="traits-header">Rarity Chart</header>
             <div className="traits-nav">
-              <Button id="base" className="traits-button" color={traitSelected === "base" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
+              <Button id="base" className="traits-button" style={{color:'white'}} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
               <Button id="shirts" className="traits-button" color={traitSelected === "shirts" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
               <Button id="hats" className="traits-button" color={traitSelected === "hats" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button>
               <Button id="accessories" className="traits-button" color={traitSelected === "accessories" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button>
@@ -300,25 +352,38 @@ const Home = (props: HomeProps) => {
             </div>
             <div className="traits-main">
                 <div id="base" className="traits-wrap" style={{display: traitSelected !== "base" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Angry} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Crying_Laughing} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Crying} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Eyes_Closed} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Grimace} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Happy} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Surprised} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Tattoos} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="shirts" className="traits-wrap" style={{display: traitSelected !== "shirts" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={BlueShirt} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Boo} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Dress_Shirt_Cardigan} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Dress_Shirt} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Hawaiian_Shirt_Orange} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Hoodie_Grey} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Hoodie_Misfits} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Inmate} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Jersey} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Rainbow_Shirt} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Thrasher_Hoodie} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Wife_Beater} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Xmas_Sweater} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="hats" className="traits-wrap" style={{display: traitSelected !== "hats" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Aviator_Hat} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Ball_Cap} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Beanie_Red} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bucket_Hat_Black} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Bucket_Hat_Yellow} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Cowboy_Hat} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Pilot_Hat} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="accessories" className="traits-wrap" style={{display: traitSelected !== "accessories" ? "none" : ""}}>
                   <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
@@ -328,11 +393,12 @@ const Home = (props: HomeProps) => {
                   <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="background" className="traits-wrap" style={{display: traitSelected !== "background" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
+                  <div className="traits-box"><img src={Forest} alt="" className="traits-img-bg"></img></div>
+                  <div className="traits-box"><img src={Halloween} alt="" className="traits-img-bg"></img></div>
+                  <div className="traits-box"><img src={Mountains} alt="" className="traits-img-bg"></img></div>
+                  <div className="traits-box"><img src={Mug} alt="" className="traits-img-bg"></img></div>
+                  <div className="traits-box"><img src={Rick} alt="" className="traits-img-bg"></img></div>
+                  <div className="traits-box"><img src={Trippy} alt="" className="traits-img-bg"></img></div>
                 </div>
             </div>
         </div>
