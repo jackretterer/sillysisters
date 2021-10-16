@@ -553,13 +553,17 @@ p {
       margin-top: 80px;
     }
 
+    .App-header-image {
+      margin-top: 80px;
+    }
+
     .App-header-desc {
       width: 90%;
     }
 
     .App-header-text {
       padding: 10px;
-      padding-top: 250px;
+      padding-top: 90px;
       text-align: center;
     }
   
