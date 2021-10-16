@@ -367,6 +367,7 @@
 }
 
 .Social-logo {
+  filter: invert(27%) sepia(52%) saturate(1681%) hue-rotate(211deg) brightness(95%) contrast(87%);
   height: 80px;
   padding: 18px;
 }
