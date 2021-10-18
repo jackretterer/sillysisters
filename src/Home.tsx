@@ -76,6 +76,7 @@ import {
 } from "./candy-machine";
 
 import { createMuiTheme } from '@material-ui/core/styles';
+import { Grid, Row, Col } from 'react-flexbox-grid';
 
 const ConnectButton = styled(WalletDialogButton)`front-size: 1em; margin: 1em; color: black; border: 2px solid ${props => props.theme.main};`;
 
@@ -354,7 +355,7 @@ const Home = (props: HomeProps) => {
         </div>
 
         <div className="traits">
-          <header className="traits-header"><img src={rarityChart} ></img></header>
+          <header className="traits-header"><img style={{maxWidth: "100%"}} src={rarityChart} ></img></header>
             <div className="traits-nav">
               <Button id="base" className="traits-button" style={{ color: traitSelected === "base" ? "white" : "black", backgroundColor: traitSelected === "base" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
               <Button id="shirts" className="traits-button" style={{ color: traitSelected === "shirts" ? "white" : "black", backgroundColor: traitSelected === "shirts" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
@@ -421,13 +422,38 @@ const Home = (props: HomeProps) => {
                   <div ><img src={Xmas_Sweater} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="hats" className="traits-wrap" style={{display: traitSelected !== "hats" ? "none" : ""}}>
-                  <div ><img src={Aviator_Hat} alt="" className="traits-img"></img></div>
-                  <div ><img src={Ball_Cap} alt="" className="traits-img"></img></div>
-                  <div ><img src={Beanie_Red} alt="" className="traits-img"></img></div>
-                  <div ><img src={Bucket_Hat_Black} alt="" className="traits-img"></img></div>
-                  <div ><img src={Bucket_Hat_Yellow} alt="" className="traits-img"></img></div>
-                  <div ><img src={Cowboy_Hat} alt="" className="traits-img"></img></div>
-                  <div ><img src={Pilot_Hat} alt="" className="traits-img"></img></div>
+                  <Grid fluid>
+                    <Row style={{ justifyContent: "center" }}>
+                      <Col>
+                        <img src={Aviator_Hat} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                      <Col>
+                        <img src={Ball_Cap} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                      <Col>
+                        <img src={Beanie_Red} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                      <Col>
+                        <img src={Bucket_Hat_Black} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                      <Col>
+                        <img src={Bucket_Hat_Yellow} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                      <Col>
+                        <img src={Cowboy_Hat} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                      <Col>
+                        <img src={Pilot_Hat} alt="" className="traits-img"></img>
+                        <p className="traits-text">Put some text here</p>
+                      </Col>
+                    </Row>
+                  </Grid>
                 </div>
                 <div id="accessories" className="traits-wrap" style={{display: traitSelected !== "accessories" ? "none" : ""}}>
                   <div ><img src={Bandana_Black} alt="" className="traits-img"></img></div>

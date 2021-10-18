@@ -59,8 +59,12 @@
 
 .traits {
   background-color: #27293d;
-  height: 750px;
+  /* height: 750px; */
   margin-top: 0px;
+}
+
+.traits-text {
+  text-align: center;
 }
 
 .traits-header {
@@ -275,7 +279,7 @@
   text-align: center;
   justify-content: center;
   padding: 20px;
-  /* object-fit: cover; */
+  max-width: 200px;
 }
 
 .traits-img-bg {
