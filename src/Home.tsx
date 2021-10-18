@@ -58,6 +58,7 @@ import Mountains from './images/traits/backgrounds/Mountains.jpg'
 import Mug from './images/traits/backgrounds/Mug.jpg'
 import Rick from './images/traits/backgrounds/Rick.jpg'
 import Trippy from './images/traits/backgrounds/Trippy.jpg'
+import rarityChart from './images/rarityChart.png'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -353,7 +354,7 @@ const Home = (props: HomeProps) => {
         </div>
 
         <div className="traits">
-          <header className="traits-header">Rarity Chart</header>
+          <header className="traits-header"><img src={rarityChart} ></img></header>
             <div className="traits-nav">
               <Button id="base" className="traits-button" style={{ color: traitSelected === "base" ? "white" : "black", backgroundColor: traitSelected === "base" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
               <Button id="shirts" className="traits-button" style={{ color: traitSelected === "shirts" ? "white" : "black", backgroundColor: traitSelected === "shirts" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
@@ -405,38 +406,38 @@ const Home = (props: HomeProps) => {
                   </div>
                 </div>
                 <div id="shirts" className="traits-wrap" style={{display: traitSelected !== "shirts" ? "none" : ""}}>
-                  <div className="traits-box"><img src={BlueShirt} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Boo} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Dress_Shirt_Cardigan} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Dress_Shirt} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Hawaiian_Shirt_Orange} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Hoodie_Grey} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Hoodie_Misfits} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Inmate} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Jersey} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Rainbow_Shirt} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Thrasher_Hoodie} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Wife_Beater} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Xmas_Sweater} alt="" className="traits-img"></img></div>
+                  <div ><img src={BlueShirt} alt="" className="traits-img"></img></div>
+                  <div ><img src={Boo} alt="" className="traits-img"></img></div>
+                  <div ><img src={Dress_Shirt_Cardigan} alt="" className="traits-img"></img></div>
+                  <div ><img src={Dress_Shirt} alt="" className="traits-img"></img></div>
+                  <div ><img src={Hawaiian_Shirt_Orange} alt="" className="traits-img"></img></div>
+                  <div ><img src={Hoodie_Grey} alt="" className="traits-img"></img></div>
+                  <div ><img src={Hoodie_Misfits} alt="" className="traits-img"></img></div>
+                  <div ><img src={Inmate} alt="" className="traits-img"></img></div>
+                  <div ><img src={Jersey} alt="" className="traits-img"></img></div>
+                  <div ><img src={Rainbow_Shirt} alt="" className="traits-img"></img></div>
+                  <div ><img src={Thrasher_Hoodie} alt="" className="traits-img"></img></div>
+                  <div ><img src={Wife_Beater} alt="" className="traits-img"></img></div>
+                  <div ><img src={Xmas_Sweater} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="hats" className="traits-wrap" style={{display: traitSelected !== "hats" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Aviator_Hat} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Ball_Cap} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Beanie_Red} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bucket_Hat_Black} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bucket_Hat_Yellow} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Cowboy_Hat} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Pilot_Hat} alt="" className="traits-img"></img></div>
+                  <div ><img src={Aviator_Hat} alt="" className="traits-img"></img></div>
+                  <div ><img src={Ball_Cap} alt="" className="traits-img"></img></div>
+                  <div ><img src={Beanie_Red} alt="" className="traits-img"></img></div>
+                  <div ><img src={Bucket_Hat_Black} alt="" className="traits-img"></img></div>
+                  <div ><img src={Bucket_Hat_Yellow} alt="" className="traits-img"></img></div>
+                  <div ><img src={Cowboy_Hat} alt="" className="traits-img"></img></div>
+                  <div ><img src={Pilot_Hat} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="accessories" className="traits-wrap" style={{display: traitSelected !== "accessories" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Bandana_Black} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Bandana_Red} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Joint} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Pipe} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Mic} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Chain} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Piercings} alt="" className="traits-img"></img></div>
-                  <div className="traits-box"><img src={Laser} alt="" className="traits-img"></img></div>
+                  <div ><img src={Bandana_Black} alt="" className="traits-img"></img></div>
+                  <div ><img src={Bandana_Red} alt="" className="traits-img"></img></div>
+                  <div ><img src={Joint} alt="" className="traits-img"></img></div>
+                  <div ><img src={Pipe} alt="" className="traits-img"></img></div>
+                  <div ><img src={Mic} alt="" className="traits-img"></img></div>
+                  <div ><img src={Chain} alt="" className="traits-img"></img></div>
+                  <div ><img src={Piercings} alt="" className="traits-img"></img></div>
+                  <div ><img src={Laser} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="background" className="traits-wrap" style={{display: traitSelected !== "background" ? "none" : ""}}>
                   <div className="traitsColumn">

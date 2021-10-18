@@ -66,9 +66,11 @@
 .traits-header {
   font-size: 40px;
   text-align: center;
-  padding-top: 50px;
-  padding-bottom: 20px;
+  padding-top: 25px;
+  padding-bottom: 0px;
+  filter: invert(81%) sepia(69%) saturate(3279%) hue-rotate(351deg) brightness(93%) contrast(82%) drop-shadow(0 0 0 white);;
 }
+
 
 .traits-nav {
   text-align: center;
@@ -252,28 +254,28 @@
 
 .traits-wrap {
   width: 100%;
-  flex-wrap: wrap;
   justify-content: center;
   display: flex;
   top: 0;
   left: 0;
-  padding: 0px;
+  padding: 20px;
 }
 
 .traits-box {
   border: 5px solid #fff;
-  width: 200px;
   box-shadow: 0 0 18px #ff9330;
   border-radius: 20px;
 }
 
 .traits-img {
   width: 100%;
-  height: 50%;
+  height: 100%;
   margin: auto;
   display: block;
   text-align: center;
   justify-content: center;
+  padding: 20px;
+  /* object-fit: cover; */
 }
 
 .traits-img-bg {
