@@ -59,7 +59,7 @@
 
 .traits {
   background-color: #27293d;
-  height: 600px;
+  height: 750px;
   margin-top: 0px;
 }
 
@@ -81,11 +81,9 @@
 .traitsColumn{
   flex: 50%;
   align-items: center;
-  max-width: 800px;
   margin: 40px auto;
   font: 500 100%/1.5 system-ui;
-  width: 50%;
-  max-width: 400px;
+  margin-top: 0px;
 }
 
 .traitsBox {
@@ -96,8 +94,8 @@
 
 .traitsGallery {
   display: grid;
-  grid-template-columns: repeat(11, 1fr);
-  grid-template-rows: repeat(11, 5vw);
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(10, 5vw);
   grid-gap: 1.5rem;
   margin-left: auto;
   margin-right: auto;
@@ -143,30 +141,88 @@
 .traitsGallery_item_5 {
   grid-column-start: 1;
   grid-column-end: 3;
-  grid-row-start: 1;
-  grid-row-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 6;
 }
 
 .traitsGallery_item_6 {
   grid-column-start: 3;
   grid-column-end: 5;
-  grid-row-start: 3;
-  grid-row-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 6;
 }
 
 .traitsGallery_item_7 {
   grid-column-start: 5;
   grid-column-end: 7;
-  grid-row-start: 5;
-  grid-row-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 6;
 }
 
 .traitsGallery_item_8 {
   grid-column-start: 7;
   grid-column-end: 9;
-  grid-row-start: 7;
-  grid-row-end: 9;
+  grid-row-start: 4;
+  grid-row-end: 6;
 }
+
+.traitsGallery_desc_1 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.traitsGallery_desc_2 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.traitsGallery_desc_3 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.traitsGallery_desc_4 {
+  grid-column-start: 8;
+  grid-column-end: 8;
+  grid-row-start: 4;
+  grid-row-end: 4;
+}
+
+.traitsGallery_desc_5 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 7;
+  grid-row-end: 7;
+}
+
+.traitsGallery_desc_6 {
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 7;
+  grid-row-end: 7;
+}
+
+.traitsGallery_desc_7 {
+  grid-column-start: 6;
+  grid-column-end: 7;
+  grid-row-start: 7;
+  grid-row-end: 7;
+}
+
+.traitsGallery_desc_8 {
+  grid-column-start: 8;
+  grid-column-end: 8;
+  grid-row-start: 7;
+  grid-row-end: 7;
+}
+
+
 
 .traits-button {
   margin-right: 10px !important;

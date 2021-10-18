@@ -355,11 +355,11 @@ const Home = (props: HomeProps) => {
         <div className="traits">
           <header className="traits-header">Rarity Chart</header>
             <div className="traits-nav">
-              <Button id="base" className="traits-button" style={blueButton} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
-              <Button id="shirts" className="traits-button" color={traitSelected === "shirts" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
-              <Button id="hats" className="traits-button" color={traitSelected === "hats" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button>
-              <Button id="accessories" className="traits-button" color={traitSelected === "accessories" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button>
-              <Button id="background" className="traits-button" color={traitSelected === "background" ? "primary" : "secondary"} variant="contained" onClick={() => handleTraitClick("background")}>Background</Button>
+              <Button id="base" className="traits-button" style={{ color: traitSelected === "base" ? "white" : "black", backgroundColor: traitSelected === "base" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
+              <Button id="shirts" className="traits-button" style={{ color: traitSelected === "shirts" ? "white" : "black", backgroundColor: traitSelected === "shirts" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
+              <Button id="hats" className="traits-button" style={{ color: traitSelected === "hats" ? "white" : "black", backgroundColor: traitSelected === "hats" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button>
+              <Button id="accessories" className="traits-button" style={{ color: traitSelected === "accessories" ? "white" : "black", backgroundColor: traitSelected === "accessories" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button>
+              <Button id="background" className="traits-button" style={{ color: traitSelected === "background" ? "white" : "black", backgroundColor: traitSelected === "background" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("background")}>Background</Button>
             </div>
             <div className="traits-main">
                 <div id="base" className="traits-wrap" style={{display: traitSelected !== "base" ? "none" : ""}}>
@@ -370,27 +370,35 @@ const Home = (props: HomeProps) => {
                           <figure className="traitsGallery_item traitsGallery_item_1">
                             <img src={Angry} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_1">1</p>
                           <figure className="traitsGallery_item traitsGallery_item_2">
                             <img src={Crying_Laughing} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_2">2</p>
                           <figure className="traitsGallery_item traitsGallery_item_3">
                             <img src={Crying} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_3">3</p>
                           <figure className="traitsGallery_item traitsGallery_item_4">
                             <img src={Eyes_Closed} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_4">4</p>
                           <figure className="traitsGallery_item traitsGallery_item_5">
                             <img src={Grimace} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_5">7</p>
                           <figure className="traitsGallery_item traitsGallery_item_6">
                             <img src={Happy} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_6">8</p>
                           <figure className="traitsGallery_item traitsGallery_item_7">
                             <img src={Surprised} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_7">9</p>
                           <figure className="traitsGallery_item traitsGallery_item_8">
                             <img src={Tattoos} className="traitsGallery_img" alt="" />
                           </figure>
+                          <p className="traitsGallery_item traitsGallery_desc_8">10</p>
                         </div>
                       </div>
                     </div>
@@ -431,13 +439,45 @@ const Home = (props: HomeProps) => {
                   <div className="traits-box"><img src={Laser} alt="" className="traits-img"></img></div>
                 </div>
                 <div id="background" className="traits-wrap" style={{display: traitSelected !== "background" ? "none" : ""}}>
-                  <div className="traits-box"><img src={Forest} alt="" className="traits-img-bg"></img></div>
-                  <div className="traits-box"><img src={Halloween} alt="" className="traits-img-bg"></img></div>
-                  <div className="traits-box"><img src={Mountains} alt="" className="traits-img-bg"></img></div>
-                  <div className="traits-box"><img src={Mug} alt="" className="traits-img-bg"></img></div>
-                  <div className="traits-box"><img src={Rick} alt="" className="traits-img-bg"></img></div>
-                  <div className="traits-box"><img src={Trippy} alt="" className="traits-img-bg"></img></div>
-                </div>
+                  <div className="traitsColumn">
+                        <div className="traitsBox">
+                          <div className="traitsGallery">
+                            <figure className="traitsGallery_item traitsGallery_item_1">
+                              <img src={Forest} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_1">1</p>
+                            <figure className="traitsGallery_item traitsGallery_item_2">
+                              <img src={Halloween} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_2">2</p>
+                            <figure className="traitsGallery_item traitsGallery_item_3">
+                              <img src={Mountains} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_3">3</p>
+                            <figure className="traitsGallery_item traitsGallery_item_4">
+                              <img src={Mug} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_4">4</p>
+                            <figure className="traitsGallery_item traitsGallery_item_5">
+                              <img src={Rick} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_5">7</p>
+                            <figure className="traitsGallery_item traitsGallery_item_6">
+                              <img src={Trippy} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_6">8</p>
+                            <figure className="traitsGallery_item traitsGallery_item_7">
+                              <img src={Surprised} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_7">9</p>
+                            <figure className="traitsGallery_item traitsGallery_item_8">
+                              <img src={Tattoos} className="traitsGallery_img" alt="" />
+                            </figure>
+                            <p className="traitsGallery_item traitsGallery_desc_8">10</p>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
             </div>
         </div>
 
