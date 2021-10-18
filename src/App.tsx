@@ -1,5 +1,6 @@
 import "./App.css";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
+import ReactGA from 'react-ga'
 
 import Home from "./Home";
 
@@ -81,6 +82,16 @@ const App = () => {
     ],
     []
   );
+
+  useEffect(() => {
+    if (document.location.hostname.search("richthebear.com") !== -1) {
+      // prod env, publish metrics
+      ReactGA.initialize("UA-210411696-1");
+      ReactGA.pageview("/");
+    } else {
+      // dev env, do not publish metrics
+    }
+  }, []);
 
   return (
       <ThemeProvider theme={theme}>
