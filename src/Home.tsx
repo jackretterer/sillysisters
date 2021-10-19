@@ -347,7 +347,7 @@ const Home = (props: HomeProps) => {
           <div className="aboutColumn">
             <h1 className="who-text">Adopt a Recruit:</h1>
             <p className="who-desc">
-                A master of disguises, RichTheBear has created 10,000 clones of himself to infiltrate human civilization 
+                A master of disguises, RichTheBear has created 4,444 clones of himself to infiltrate human civilization 
                 and undermine the establishment.
             </p>
             <p className="who-desc">
@@ -388,7 +388,7 @@ const Home = (props: HomeProps) => {
                       </Col>
                       <Col>
                         <img src={Eyes_Closed} alt="" className="traits-img"></img>
-                        <p className="traits-text">Eyes_Closed: 12%</p>
+                        <p className="traits-text">Eyes Closed: 12%</p>
                       </Col>
                       <Col>
                         <img src={Grimace} alt="" className="traits-img"></img>
@@ -611,7 +611,7 @@ const Home = (props: HomeProps) => {
                 <div className="timeline-body">
                   <h4 className="timeline-title"><span className="badge">Present</span></h4>
                   <p className="roadmap">Minting:</p>
-                  <p>Be part of the minting process of 10,000 unique bear clones!</p>
+                  <p>Be part of the minting process of 4,444 unique bear clones!</p>
                   <p className="timeline-subtitle">Fall 2021</p>
                 </div>
               </div>
