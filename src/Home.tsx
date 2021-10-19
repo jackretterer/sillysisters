@@ -360,11 +360,15 @@ const Home = (props: HomeProps) => {
         <div className="traits">
           <header className="traits-header"><img style={{maxWidth: "100%"}} src={rarityChart} ></img></header>
             <div className="traits-nav">
-              <Button id="base" className="traits-button" style={{ color: traitSelected === "base" ? "white" : "black", backgroundColor: traitSelected === "base" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button>
-              <Button id="shirts" className="traits-button" style={{ color: traitSelected === "shirts" ? "white" : "black", backgroundColor: traitSelected === "shirts" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button>
-              <Button id="hats" className="traits-button" style={{ color: traitSelected === "hats" ? "white" : "black", backgroundColor: traitSelected === "hats" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button>
-              <Button id="accessories" className="traits-button" style={{ color: traitSelected === "accessories" ? "white" : "black", backgroundColor: traitSelected === "accessories" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button>
-              <Button id="background" className="traits-button" style={{ color: traitSelected === "background" ? "white" : "black", backgroundColor: traitSelected === "background" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("background")}>Background</Button>
+              <Grid fluid>
+                <Row style={{ justifyContent: "center" }}>
+                  <Col><Button id="base" className="traits-button" style={{ color: traitSelected === "base" ? "white" : "black", backgroundColor: traitSelected === "base" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("base")}>Base</Button></Col>
+                  <Col><Button id="shirts" className="traits-button" style={{ color: traitSelected === "shirts" ? "white" : "black", backgroundColor: traitSelected === "shirts" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("shirts")}>Shirts</Button></Col>
+                  <Col><Button id="hats" className="traits-button" style={{ color: traitSelected === "hats" ? "white" : "black", backgroundColor: traitSelected === "hats" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("hats")}>Hats</Button></Col>
+                  <Col><Button id="accessories" className="traits-button" style={{ color: traitSelected === "accessories" ? "white" : "black", backgroundColor: traitSelected === "accessories" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("accessories")}>Accessories</Button></Col>
+                  <Col><Button id="background" className="traits-button" style={{ color: traitSelected === "background" ? "white" : "black", backgroundColor: traitSelected === "background" ? "#3f51b5" : "white" }} variant="contained" onClick={() => handleTraitClick("background")}>Background</Button></Col>
+                </Row>
+              </Grid>
             </div>
             <div className="traits-main">
                 <div id="base" className="traits-wrap" style={{display: traitSelected !== "base" ? "none" : ""}}>
