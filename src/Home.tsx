@@ -537,11 +537,11 @@ const Home = (props: HomeProps) => {
                         <p className="traits-text">Lasers: 3%</p>
                       </Col>
                       <Col>
-                        <img src={Joint} alt="" className="traits-img"></img>
+                        <img src={Joint} alt="" className="traits-img traits-img-special"></img>
                         <p className="traits-text">Joint: 5%</p>
                       </Col>
                       <Col>
-                        <img src={Pipe} alt="" className="traits-img"></img>
+                        <img src={Pipe} alt="" className="traits-img traits-img-special"></img>
                         <p className="traits-text">Pipe: 5%</p>
                       </Col>
                     </Row>
