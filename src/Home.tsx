@@ -59,6 +59,9 @@ import Mug from './images/traits/backgrounds/Mug.jpg'
 import Rick from './images/traits/backgrounds/Rick.jpg'
 import Trippy from './images/traits/backgrounds/Trippy.jpg'
 import rarityChart from './images/rarityChart.png'
+import GlassesReading from './images/traits/glasses/Glasses_Reading.png'
+import GlassesRound from './images/traits/glasses/Glasses_Round.png'
+import PitVipers from './images/traits/glasses/Pit_Vipers.png'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -365,146 +368,211 @@ const Home = (props: HomeProps) => {
             </div>
             <div className="traits-main">
                 <div id="base" className="traits-wrap" style={{display: traitSelected !== "base" ? "none" : ""}}>
-                <div className="traitsRow">
-                    <div className="traitsColumn">
-                      <div className="traitsBox">
-                        <div className="traitsGallery">
-                          <figure className="traitsGallery_item traitsGallery_item_1">
-                            <img src={Angry} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_1">1</p>
-                          <figure className="traitsGallery_item traitsGallery_item_2">
-                            <img src={Crying_Laughing} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_2">2</p>
-                          <figure className="traitsGallery_item traitsGallery_item_3">
-                            <img src={Crying} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_3">3</p>
-                          <figure className="traitsGallery_item traitsGallery_item_4">
-                            <img src={Eyes_Closed} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_4">4</p>
-                          <figure className="traitsGallery_item traitsGallery_item_5">
-                            <img src={Grimace} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_5">7</p>
-                          <figure className="traitsGallery_item traitsGallery_item_6">
-                            <img src={Happy} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_6">8</p>
-                          <figure className="traitsGallery_item traitsGallery_item_7">
-                            <img src={Surprised} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_7">9</p>
-                          <figure className="traitsGallery_item traitsGallery_item_8">
-                            <img src={Tattoos} className="traitsGallery_img" alt="" />
-                          </figure>
-                          <p className="traitsGallery_item traitsGallery_desc_8">10</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                <Grid fluid>
+                    <Row style={{ justifyContent: "center" }}>    
+                      <Col>
+                        <img src={Angry} alt="" className="traits-img"></img>
+                        <p className="traits-text">Angry: 35%</p>
+                      </Col>
+                      <Col>
+                        <img src={Crying} alt="" className="traits-img"></img>
+                        <p className="traits-text">Crying: 5%</p>
+                      </Col>
+                      <Col>
+                        <img src={Crying_Laughing} alt="" className="traits-img"></img>
+                        <p className="traits-text">Crying-Laughing: 3%</p>
+                      </Col>
+                      <Col>
+                        <img src={Eyes_Closed} alt="" className="traits-img"></img>
+                        <p className="traits-text">Eyes_Closed: 12%</p>
+                      </Col>
+                      <Col>
+                        <img src={Grimace} alt="" className="traits-img"></img>
+                        <p className="traits-text">Grimace: 15%</p>
+                      </Col>
+                      <Col>
+                        <img src={Happy} alt="" className="traits-img"></img>
+                        <p className="traits-text">Happy: 20%</p>
+                      </Col>
+                      <Col>
+                        <img src={Surprised} alt="" className="traits-img"></img>
+                        <p className="traits-text">Surprised: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={Tattoos} alt="" className="traits-img"></img>
+                        <p className="traits-text">Tattoos: 30%</p>
+                      </Col>
+                    </Row>
+                  </Grid>
                 </div>
                 <div id="shirts" className="traits-wrap" style={{display: traitSelected !== "shirts" ? "none" : ""}}>
-                  <div ><img src={BlueShirt} alt="" className="traits-img"></img></div>
-                  <div ><img src={Boo} alt="" className="traits-img"></img></div>
-                  <div ><img src={Dress_Shirt_Cardigan} alt="" className="traits-img"></img></div>
-                  <div ><img src={Dress_Shirt} alt="" className="traits-img"></img></div>
-                  <div ><img src={Hawaiian_Shirt_Orange} alt="" className="traits-img"></img></div>
-                  <div ><img src={Hoodie_Grey} alt="" className="traits-img"></img></div>
-                  <div ><img src={Hoodie_Misfits} alt="" className="traits-img"></img></div>
-                  <div ><img src={Inmate} alt="" className="traits-img"></img></div>
-                  <div ><img src={Jersey} alt="" className="traits-img"></img></div>
-                  <div ><img src={Rainbow_Shirt} alt="" className="traits-img"></img></div>
-                  <div ><img src={Thrasher_Hoodie} alt="" className="traits-img"></img></div>
-                  <div ><img src={Wife_Beater} alt="" className="traits-img"></img></div>
-                  <div ><img src={Xmas_Sweater} alt="" className="traits-img"></img></div>
+                <Grid fluid>
+                    <Row style={{ justifyContent: "center" }}>
+                      <Col>
+                        <img src={BlueShirt} alt="" className="traits-img"></img>
+                        <p className="traits-text">Blue Shirt: 15%</p>
+                      </Col>
+                      <Col>
+                        <img src={Boo} alt="" className="traits-img"></img>
+                        <p className="traits-text">Boo: 1%</p>
+                      </Col>
+                      <Col>
+                        <img src={Dress_Shirt_Cardigan} alt="" className="traits-img"></img>
+                        <p className="traits-text">Cardigan: 15%</p>
+                      </Col>
+                      <Col>
+                        <img src={Dress_Shirt} alt="" className="traits-img"></img>
+                        <p className="traits-text">Dress Shirt: 17%</p>
+                      </Col>
+                      <Col>
+                        <img src={Hawaiian_Shirt_Orange} alt="" className="traits-img"></img>
+                        <p className="traits-text">Hawaiian Shirt: 13%</p>
+                      </Col>
+                      <Col>
+                        <img src={Hoodie_Misfits} alt="" className="traits-img"></img>
+                        <p className="traits-text">Skull Hoodie: 3%</p>
+                      </Col>
+                      <Col>
+                        <img src={Inmate} alt="" className="traits-img"></img>
+                        <p className="traits-text">Inmate: 5%</p>
+                      </Col>
+                      <Col>
+                        <img src={Jersey} alt="" className="traits-img"></img>
+                        <p className="traits-text">Jersey: 6%</p>
+                      </Col>
+                      <Col>
+                        <img src={Rainbow_Shirt} alt="" className="traits-img"></img>
+                        <p className="traits-text">Rainbow Shirt: 1%</p>
+                      </Col>
+                      <Col>
+                        <img src={Thrasher_Hoodie} alt="" className="traits-img"></img>
+                        <p className="traits-text">Fire Hoodie: 7%</p>
+                      </Col>
+                      <Col>
+                        <img src={Wife_Beater} alt="" className="traits-img"></img>
+                        <p className="traits-text">Wife Beater: 15%</p>
+                      </Col>
+                      <Col>
+                        <img src={Xmas_Sweater} alt="" className="traits-img"></img>
+                        <p className="traits-text">Xmas Sweater: 2%</p>
+                      </Col>
+                    </Row>
+                  </Grid>
                 </div>
                 <div id="hats" className="traits-wrap" style={{display: traitSelected !== "hats" ? "none" : ""}}>
                   <Grid fluid>
                     <Row style={{ justifyContent: "center" }}>
                       <Col>
                         <img src={Aviator_Hat} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Aviator Hat: 3%</p>
                       </Col>
                       <Col>
                         <img src={Ball_Cap} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Baseball Hat: 10%</p>
                       </Col>
                       <Col>
                         <img src={Beanie_Red} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Beanie: 14%</p>
                       </Col>
                       <Col>
                         <img src={Bucket_Hat_Black} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Black Bucket Hat: 20%</p>
                       </Col>
                       <Col>
                         <img src={Bucket_Hat_Yellow} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Yellow Bucket Hat: 20%</p>
                       </Col>
                       <Col>
                         <img src={Cowboy_Hat} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Cowboy Hat: 8%</p>
                       </Col>
                       <Col>
                         <img src={Pilot_Hat} alt="" className="traits-img"></img>
-                        <p className="traits-text">Put some text here</p>
+                        <p className="traits-text">Pilot Hat: 5%</p>
                       </Col>
                     </Row>
                   </Grid>
                 </div>
                 <div id="accessories" className="traits-wrap" style={{display: traitSelected !== "accessories" ? "none" : ""}}>
-                  <div ><img src={Bandana_Black} alt="" className="traits-img"></img></div>
-                  <div ><img src={Bandana_Red} alt="" className="traits-img"></img></div>
-                  <div ><img src={Joint} alt="" className="traits-img"></img></div>
-                  <div ><img src={Pipe} alt="" className="traits-img"></img></div>
-                  <div ><img src={Mic} alt="" className="traits-img"></img></div>
-                  <div ><img src={Chain} alt="" className="traits-img"></img></div>
-                  <div ><img src={Piercings} alt="" className="traits-img"></img></div>
-                  <div ><img src={Laser} alt="" className="traits-img"></img></div>
+                  <Grid fluid>
+                    <Row style={{ justifyContent: "center" }}>
+                      <Col>
+                        <img src={GlassesRound} alt="" className="traits-img"></img>
+                        <p className="traits-text">Hippie Glasses: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={GlassesReading} alt="" className="traits-img"></img>
+                        <p className="traits-text">Reading Glasses: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={PitVipers} alt="" className="traits-img"></img>
+                        <p className="traits-text">Pit Vipers: 3%</p>
+                      </Col>
+                      <Col>
+                        <img src={Mic} alt="" className="traits-img"></img>
+                        <p className="traits-text">Mic: 1%</p>
+                      </Col>
+                      <Col>
+                        <img src={Bandana_Black} alt="" className="traits-img"></img>
+                        <p className="traits-text">Black Banadana: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={Bandana_Red} alt="" className="traits-img"></img>
+                        <p className="traits-text">Red Bandana: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={Chain} alt="" className="traits-img"></img>
+                        <p className="traits-text">Chain: 5%</p>
+                      </Col>
+                      <Col>
+                        <img src={Piercings} alt="" className="traits-img"></img>
+                        <p className="traits-text">Piercings: 5%</p>
+                      </Col>
+                      <Col>
+                        <img src={Laser} alt="" className="traits-img"></img>
+                        <p className="traits-text">Lasers: 3%</p>
+                      </Col>
+                      <Col>
+                        <img src={Joint} alt="" className="traits-img"></img>
+                        <p className="traits-text">Joint: 5%</p>
+                      </Col>
+                      <Col>
+                        <img src={Pipe} alt="" className="traits-img"></img>
+                        <p className="traits-text">Pipe: 5%</p>
+                      </Col>
+                    </Row>
+                  </Grid>
                 </div>
                 <div id="background" className="traits-wrap" style={{display: traitSelected !== "background" ? "none" : ""}}>
-                  <div className="traitsColumn">
-                        <div className="traitsBox">
-                          <div className="traitsGallery">
-                            <figure className="traitsGallery_item traitsGallery_item_1">
-                              <img src={Forest} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_1">1</p>
-                            <figure className="traitsGallery_item traitsGallery_item_2">
-                              <img src={Halloween} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_2">2</p>
-                            <figure className="traitsGallery_item traitsGallery_item_3">
-                              <img src={Mountains} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_3">3</p>
-                            <figure className="traitsGallery_item traitsGallery_item_4">
-                              <img src={Mug} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_4">4</p>
-                            <figure className="traitsGallery_item traitsGallery_item_5">
-                              <img src={Rick} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_5">7</p>
-                            <figure className="traitsGallery_item traitsGallery_item_6">
-                              <img src={Trippy} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_6">8</p>
-                            <figure className="traitsGallery_item traitsGallery_item_7">
-                              <img src={Surprised} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_7">9</p>
-                            <figure className="traitsGallery_item traitsGallery_item_8">
-                              <img src={Tattoos} className="traitsGallery_img" alt="" />
-                            </figure>
-                            <p className="traitsGallery_item traitsGallery_desc_8">10</p>
-                          </div>
-                        </div>
-                      </div>
-                  </div>
+                <Grid fluid>
+                    <Row style={{ justifyContent: "center" }}>
+                      <Col>
+                        <img src={Mountains} alt="" className="traits-img"></img>
+                        <p className="traits-text">Slopes: 15%</p>
+                      </Col>
+                      <Col>
+                        <img src={Trippy} alt="" className="traits-img"></img>
+                        <p className="traits-text">Trip City: 15%</p>
+                      </Col>
+                      <Col>
+                        <img src={Halloween} alt="" className="traits-img"></img>
+                        <p className="traits-text">Halloween: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={Forest} alt="" className="traits-img"></img>
+                        <p className="traits-text">Forest: 20%</p>
+                      </Col>
+                      <Col>
+                        <img src={Mug} alt="" className="traits-img"></img>
+                        <p className="traits-text">Mugshot: 20%</p>
+                      </Col>
+                      <Col>
+                        <img src={Rick} alt="" className="traits-img"></img>
+                        <p className="traits-text">Space Portal: 20%</p>
+                      </Col>
+                    </Row>
+                  </Grid>
+                </div>      
             </div>
         </div>
 
