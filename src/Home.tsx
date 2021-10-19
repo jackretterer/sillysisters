@@ -303,7 +303,7 @@ const Home = (props: HomeProps) => {
             </h1>
           </header>
           <p className="App-header-desc">
-            Join the mysterious and crafty mastermind in his mission to reclaim the forest and topple mankind.
+            {/* Join the mysterious and crafty mastermind in his mission to reclaim the forest and topple mankind. */}
           </p>
         </div>
         <div className="adopt-Recruit">
