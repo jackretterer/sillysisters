@@ -43,7 +43,7 @@
 }
 
 .adopt-desc {
-  text-align: justify;
+  text-align: left;
   color:white;
   padding-top: 10px;
   font-weight: bold;
@@ -390,7 +390,7 @@
 
 .who-desc {
   padding-left: 0px;
-  text-align: justify;
+  text-align: left;
   color: white;
   padding-top: 10px;
   font-weight: bold;
