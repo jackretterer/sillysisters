@@ -57,6 +57,7 @@ import Mountains from './images/traits/backgrounds/Mountains.jpg'
 import Mug from './images/traits/backgrounds/Mug.jpg'
 import Rick from './images/traits/backgrounds/Rick.jpg'
 import Trippy from './images/traits/backgrounds/Trippy.jpg'
+import Amusement from './images/traits/backgrounds/Amusement.jpg'
 import rarityChart from './images/rarityChart.png'
 import GlassesReading from './images/traits/glasses/Glasses_Reading.png'
 import GlassesRound from './images/traits/glasses/Glasses_Round.png'
@@ -567,11 +568,15 @@ const Home = (props: HomeProps) => {
                       </Col>
                       <Col>
                         <img src={Mug} alt="" className="traits-img"></img>
-                        <p className="traits-text">Mugshot: 20%</p>
+                        <p className="traits-text">Mugshot: 10%</p>
                       </Col>
                       <Col>
                         <img src={Rick} alt="" className="traits-img"></img>
                         <p className="traits-text">Space Portal: 20%</p>
+                      </Col>
+                      <Col>
+                        <img src={Amusement} alt="" className="traits-img"></img>
+                        <p className="traits-text">Amusement Park: 10%</p>
                       </Col>
                     </Row>
                   </Grid>
