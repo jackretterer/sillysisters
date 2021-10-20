@@ -62,6 +62,8 @@ import rarityChart from './images/rarityChart.png'
 import GlassesReading from './images/traits/glasses/Glasses_Reading.png'
 import GlassesRound from './images/traits/glasses/Glasses_Round.png'
 import PitVipers from './images/traits/glasses/Pit_Vipers.png'
+import Roadmap_Text from './Roadmap.png'
+import Space from './images/traits/backgrounds/Space.jpg'
 
 import * as anchor from "@project-serum/anchor";
 
@@ -572,11 +574,15 @@ const Home = (props: HomeProps) => {
                       </Col>
                       <Col>
                         <img src={Rick} alt="" className="traits-img"></img>
-                        <p className="traits-text">Space Portal: 20%</p>
+                        <p className="traits-text">Space Portal: 10%</p>
                       </Col>
                       <Col>
                         <img src={Amusement} alt="" className="traits-img"></img>
                         <p className="traits-text">Amusement Park: 10%</p>
+                      </Col>
+                      <Col>
+                        <img src={Space} alt="" className="traits-img"></img>
+                        <p className="traits-text">Galactic: 10%</p>
                       </Col>
                     </Row>
                   </Grid>
@@ -592,6 +598,7 @@ const Home = (props: HomeProps) => {
         </header>
         <body>
           <div className="container">
+            <header className="traits-header"><img style={{maxWidth: "30%"}} src={Roadmap_Text} ></img></header>
             <div className="timeline">
               <div className="timeline-container primary">
                 <div className="timeline-icon">
