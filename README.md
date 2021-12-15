@@ -1,12 +1,8 @@
 # Candy-Machine-Mint
 
-The Candy-Machine-Mint project is designed to let users fork, customize, and deploy their own candy machine mint app to a custom domain, ultra fast.
+The SillySister's is a project aimed at bringing women to the front of cutting edge technology and generating enough revenue to combat climate change. Less than 1/5 of all crypto-enthusiasts are women and even fewer are in it for the long run / right reasons.
 
-A candy machine is an on-chain Solana program (or smart contract) for managing fair mint. Fair mints:
-* Start and finish at the same time for everyone.
-* Won't accept your funds if they're out of NFTs to sell.
-
-The Candy-Machine-Mint project is meant to be as simple and usable as possible, accessible to everyone from long-time crypto devs to junior React devs with a vague interest in NFTs. Our goal is to empower users to create their own front ends to display, sell, and manage their NFTs as simply as possible by just updating a few styled components and following a well-documented process for setup and shipping.
+We have decided to make this entire repository public to spread awareness and educate the masses on NFT creation and the blockchain technology stack.
 
 ## Getting Set Up
 
